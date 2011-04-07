@@ -35,7 +35,7 @@ module Rack
 
             # add JSON params to request
             signed_params.each do |k,v|
-              request.params[k] = v
+              request.params[k] = v unless request.params[k]
             end
           end
         end
